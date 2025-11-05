@@ -10,7 +10,7 @@ st.set_page_config(page_title="Expresso Churn Prediction", layout="wide")
 with open('LogisticRegression_model.pkl', 'rb') as f:
     model, encoders = pickle.load(f)
 
-df = pd.read_csv('Expresso_churn_dataset.csv')
+df = pd.read_csv('Expresso_churn_dataset.csv.bz2',compression='bz2')
 
 l = LabelEncoder()
 
@@ -145,4 +145,5 @@ if page == "Dashboard":
         st.plotly_chart(fig_data, use_container_width=True)
 
     st.caption("📊 Built with Streamlit & Plotly — Expresso Churn Analytics")
+
 
