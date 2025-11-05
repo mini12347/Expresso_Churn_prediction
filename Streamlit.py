@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -295,3 +295,4 @@ if page == "Dashboard":
         st.plotly_chart(fig_data, use_container_width=True)
 
     st.caption("📊 Built with Streamlit & Plotly — Expresso Churn Analytics")
+
