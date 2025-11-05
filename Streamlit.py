@@ -26,7 +26,7 @@ if page == "Churn Prediction":
     with st.form(key='prediction_form'):
         var = {}
         for i in df.columns:
-            if i in ['CHURN','user_id','MRG','ZONE1','ZONE2'] :
+            if i in ['CHURN','user_id','MRG','ZONE1','ZONE2','Unnamed: 0'] :
                 continue
             if df[i].dtype in ['int64', 'float64']:
                 var[i] = st.number_input(
@@ -146,4 +146,5 @@ if page == "Dashboard":
         st.plotly_chart(fig_data, use_container_width=True)
 
     st.caption("📊 Built with Streamlit & Plotly — Expresso Churn Analytics")
+
 
